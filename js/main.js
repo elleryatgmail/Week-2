@@ -18,11 +18,11 @@ requirejs.config({
 // your application logic in there.
 //requirejs(['app/main']);
 
-require(['Playlist', 'bootstrap'], function(Playlist){
+require(['PlaylistView', 'bootstrap'], function(PlaylistView){
 
    $(function(){
 
-     var playlist = new Playlist();
+     var playlist = new PlaylistView();
 
    });
 
