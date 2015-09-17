@@ -12,22 +12,22 @@
 7. Do the same for Bootstrap
 
 ## Refactor Playlist 
-1. Wrap the Playlist in a define method that depends on jquery
-2. Wrap the main.js code that initializes a Playlist in a `require()`
-3. Make sure to inject the Playlist into that require block
-4. Check to see if it works
-5. Remember to remove all of the `<script>` tags on the original index.html, in their place should be the single `<script>` for require
+8. Wrap the Playlist in a define method that depends on jquery
+9. Wrap the main.js code that initializes a Playlist in a `require()`
+10. Make sure to inject the Playlist into that require block
+11. Check to see if it works
+12. Remember to remove all of the `<script>` tags on the original index.html, in their place should be the single `<script>` for require
 
 ## Separate Out DOM vs Business Logic
-1. DOM functions go in PlaylistView.js
-2. Business logic functions will stay in Playlist.js
-3. Include the Playlist module in the PlaylistView module
-4. Use PlaylistView in main.js to initialize, just as before
+13. DOM functions go in PlaylistView.js
+14. Business logic functions will stay in Playlist.js
+15. Include the Playlist module in the PlaylistView module
+16. Use PlaylistView in main.js to initialize, just as before
 
 *For this exercise, "business logic" functions are anything that doesn't touch the DOM. So Playlist.js should not include jquery.*
 
 ## Bonus: Create a Song.js module
-1. Create the module, just give it a title
-2. Refactor the Playlist to use that Song module
+17. Create the module, just give it a title
+18. Refactor the Playlist to use that Song module
 
 *The playlist session storage should be storing an object for the song like `{title: "Highway to Hell"}`*
