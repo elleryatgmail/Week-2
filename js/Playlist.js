@@ -1,3 +1,5 @@
+define(['jquery','Playlist'], function($,Playlist){
+
 
 var Playlist = function(){
   // initialize
@@ -7,6 +9,8 @@ var Playlist = function(){
   this.updatePlaylist();
 
 };
+
+
 Playlist.prototype.listenAddSong = function(){
   var that = this;
   $('#addSongForm').on('submit', function(event){
@@ -16,18 +20,29 @@ Playlist.prototype.listenAddSong = function(){
     return false;
   });
 };
+
+
+
 Playlist.prototype.addSong = function(song){
   this.playlist.push(song);
   this.updatePlaylist();
 };
+
+
+
 Playlist.prototype.removeSong = function(index){
   this.playlist.splice(index, 1);
   this.updatePlaylist();
 };
+
+
+
 Playlist.prototype.updatePlaylist = function() {
   sessionStorage.setItem('playlist', JSON.stringify(this.playlist));
   this.updatePlaylistDom();
 };
+
+
 Playlist.prototype.updatePlaylistDom = function(){
   var that = this;
   var playlistDom = this.playlist.map(function(song, index){
@@ -47,3 +62,6 @@ Playlist.prototype.updatePlaylistDom = function(){
   $('#currentPlaylist').html(playlistDom);
 
 };
+
+   return Playlist;
+});
